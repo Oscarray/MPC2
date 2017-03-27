@@ -45,7 +45,7 @@
 
   </div>
   <div id="main">
-      <canvas nx=matrix row=16 col=16></canvas>  
+      <canvas nx=matrix></canvas>  
       
   </div>
   <div id="rightMenu">
@@ -54,7 +54,12 @@
   </div>
 
   <script>
-    
+    nx.onload = function() {
+        matrix1.col = 16;
+        matrix1.row = 16;
+        matrix1.bpm = 120;
+        matrix1.init();
+    }
   </script>
   
 </body>
