@@ -38,6 +38,14 @@
     }
 
     </style>
+    <script>
+    nx.onload = function() {
+        matrix1.col = 16;
+        matrix1.row = 16;
+        matrix1.bpm = 120;
+        matrix1.init();
+    }
+  </script>
     
 </head>
 <body id="mainBody" width="100%" height="100%">
@@ -52,15 +60,6 @@
       
       
   </div>
-
-  <script>
-    nx.onload = function() {
-        matrix1.col = 16;
-        matrix1.row = 16;
-        matrix1.bpm = 120;
-        matrix1.init();
-    }
-  </script>
   
 </body>
 </html>
