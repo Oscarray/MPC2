@@ -43,7 +43,7 @@
         
         }
         
-    .menuButton, .selectorButton{
+    .drpButton, .selectorButton{
         background-color: #30144f;
         color: white;
         width: 100%;
@@ -53,16 +53,16 @@
         border-radius: 2px;
         transition-duration: 0.4s;
         }
-    .menuButton:hover, .selectorButton:hover{
+    .drpButton:hover, .selectorButton:hover{
         background-color: #9b6bcf;
         color: black;
         }
   
-    #button5.dropdown{
+    .dropdown{
         position: relative;
         display: inline-block;
         }
-    #button5.dropdown-content {
+    .dropdown-content {
         display: none;
         position: absolute;
         background-color: #f9f9f9;
@@ -72,11 +72,11 @@
         z-index: 1;
         } 
         
-    #button5.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
         }
         
     #button5.dropdown a:hover {background-color: #f1f1f1}
@@ -108,16 +108,18 @@
       
   </div>
   <div id="rightMenu">
-      <button id= button5 class= menuButton onclick= "seqTransport()">Play</button>
-        <div id= dropdown1 class= dropdown-content>
+      <div class= "dropdown">
+      <button id= "button5" class= "drpButton" onclick= "seqTransport()">Play</button>
+        <div id= "dropdown1" class= "dropdown-content">
             <a href="#play">Play</a>
             <a href="#pause">Pause</a>
             <a href="#reset">Reset</a>
             <a href="#erase">Erase</a>
         </div>
-      <button id= button6 class= menuButton onclick= "setTempo()">Tempo</button>
-      <button id= button7 class= menuButton>Mute</button>
-      <button id= button8 class= menuButton>Discard</button>
+      </div>
+      <button id= button6 class= drpButton onclick= "setTempo()">Tempo</button>
+      <button id= button7 class= drpButton>Mute</button>
+      <button id= button8 class= drpButton>Discard</button>
       
   </div>
     
