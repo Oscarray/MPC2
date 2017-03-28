@@ -97,7 +97,7 @@
 </head>
 <body id="mainBody" width="100%" height="100%">
   <div id="leftMenu">
-      <button id= button1 class= selectorButton>steve</button>
+      <button id= button1 class= selectorButton>John</button>
       <button id= button2 class= selectorButton>Drum Pads</button>
       <button id= button3 class= selectorButton>FX</button>
       <button id= button4 class= selectorButton>Settings</button>
@@ -126,7 +126,10 @@
     <script> 
           // Display transport controls when transport button clicked
         function myFunction() {
-            document.getElementById("myDropdown").classlist.toggle("show");
+            var contentId = document.getElementById("myDropdown");
+              // Toggle 
+              contentId.style.display == "block" ? contentId.style.display = "none" : 
+            contentId.style.display = "block"; 
         }
         // Display tempo slider when tempo button clicked
         function setTempo(){
