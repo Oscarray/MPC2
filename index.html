@@ -97,7 +97,7 @@
       
   </div>
   <div id="rightMenu">
-      <button id= button5>Play/Pause</button>
+      <button id= button5>Play</button>
       <button id= button6>Tempo</button>
       <button id= button7>Mute</button>
       <button id= button8>Discard</button>
@@ -111,9 +111,13 @@
         function startStop() {
          if (seqState == 0){
         matrix1.sequence(tempo);
+             seqState = 1;
+             document.getElementById("button5").innerHTML = "Pause";
          }
          else {
-          matrix1.stop;   
+          matrix1.stop;
+          seqState = 0;
+             document.getElementById("button5").innerHTML = "Play";
          }
         }
     </script>
