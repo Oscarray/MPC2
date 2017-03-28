@@ -81,7 +81,7 @@
         
     .dropdown a:hover {background-color: #f1f1f1}
 
-    dropdown1.show {display:block;}
+    .show {display:block;}
 
 
     </style>
@@ -110,7 +110,7 @@
   <div id="rightMenu">
       <div class= "dropdown">
       <button onclick="myFunction()" id="button5" class="drpButton">Play</button>
-        <div id= "dropdown1" class= "dropdown-content">
+        <div id= "myDropdown" class= "dropdown-content">
             <a href="#play">Play</a>
             <a href="#pause">Pause</a>
             <a href="#reset">Reset</a>
@@ -126,7 +126,7 @@
     <script> 
           // Display transport controls when transport button clicked
         function myFunction() {
-            document.getElementById("dropdown1").classlist.toggle("show");
+            document.getElementById("myDropdown").classlist.toggle("show");
         }
         // Display tempo slider when tempo button clicked
         function setTempo(){
