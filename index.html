@@ -78,7 +78,7 @@
     nx.onload = function() {
         matrix1.col = 16;
         matrix1.row = 12;
-        matrix1.bpm = 120;
+        matrix1.bpm = tempo;
         matrix1.init();
     }
   </script>
@@ -103,6 +103,16 @@
       <button id= button8>Discard</button>
       
   </div>
+    
+    <script>
+       var tempo = 120;
+        
+        document.getElementById("button5").addEventListener("click", startStop);
+        function startStop() {
+            
+         matrix1.sequence(tempo);   
+        }
+    </script>
   
 </body>
 </html>
