@@ -97,7 +97,7 @@
       
   </div>
   <div id="rightMenu">
-      <button id= button5><img src="Playimage.jpeg" size= 50%></button>
+      <button id= button5>Play/Pause</button>
       <button id= button6>Tempo</button>
       <button id= button7>Mute</button>
       <button id= button8>Discard</button>
@@ -106,11 +106,15 @@
     
     <script>
        var tempo = 120;
-        
+       var seqState = 0; 
         document.getElementById("button5").addEventListener("click", startStop);
         function startStop() {
-            
-         matrix1.sequence(tempo);   
+         if (seqState == 0){
+        matrix1.sequence(tempo);
+         }
+         else {
+          matrix1.stop;   
+         }
         }
     </script>
   
