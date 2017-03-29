@@ -82,7 +82,7 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #9b6bcf;
+        background-color: #30144f;
         overflow: auto;
         width: 100%;
         height: 100%;
@@ -96,7 +96,7 @@
         display: block;
         }
         
-    .dropdown a:hover {background-color: #f1f1f1}
+    .dropdown a:hover {background-color: #9b6bcf}
 
     myDropdown.show {display:block;}
 
@@ -114,7 +114,7 @@
 </head>
 <body id="mainBody" width="100%" height="100%">
   <div id="leftMenu">
-      <button id= button1 class= selectorButton>Bert</button>
+      <button id= button1 class= selectorButton>Dave</button>
       <button id= button2 class= selectorButton>Drum Pads</button>
       <button id= button3 class= selectorButton>FX</button>
       <button id= button4 class= selectorButton>Settings</button>
@@ -126,8 +126,8 @@
   </div>
   <div id="rightMenu">
       <div class= "dropdown">
-      <button onclick="myFunction()" id="button5" class="drpButton">Play</button>
-        <div id= "myDropdown" class= "dropdown-content">
+      <button onclick="dropdown1()" id="button5" class="drpButton">Play</button>
+        <div id= "dropdown1" class= "dropdown-content">
             <a href="#play">Play</a>
             <a href="#pause">Pause</a>
             <a href="#reset">Reset</a>
@@ -135,18 +135,18 @@
       </div>
       
       <div class= "dropdown">
-      <button onclick="setTempo()" id="button6" class="drpButton">Tempo</button>
-        <div id= "myDropdown" class= "dropdown-content">
-            <a href="#play">Play</a>
-            <a href="#pause">Pause</a>
-            <a href="#reset">Reset</a>
+      <button onclick="dropdown2()" id="button6" class="drpButton">Tempo</button>
+        <div id= "dropdown2" class= "dropdown-content">
+            <a href="#tempo1">Tempo +</a>
+            <a href="#tempo2">Tempo -</a>
+            <a href="#reset2">Reset</a>
 
         </div>
       </div>
       
       <div class= "dropdown">
-      <button onclick="myFunction()" id="button7" class="drpButton">Volume</button>
-        <div id= "myDropdown" class= "dropdown-content">
+      <button onclick="dropdown3()" id="button7" class="drpButton">Volume</button>
+        <div id= "dropdown3" class= "dropdown-content">
             <a href="#volume1">Volume +</a>
             <a href="#volume2">Volume -</a>
             <a href="#mute">Mute</a>
@@ -155,8 +155,8 @@
       </div>
       
       <div class= "dropdown">
-      <button onclick="myFunction()" id="button8" class="drpButton">Discard</button>
-        <div id= "myDropdown" class= "dropdown-content">
+      <button onclick="dropdown4()" id="button8" class="drpButton">Discard</button>
+        <div id= "dropdown4" class= "dropdown-content">
             <a href="#play">Play</a>
             <a href="#pause">Pause</a>
             <a href="#reset">Reset</a>
@@ -166,16 +166,33 @@
   </div>
     
     <script> 
-          // Display transport controls when transport button clicked
-        function myFunction() {
-            var contentId = document.getElementById("myDropdown");
+          // Display dropdown 1
+        function dropdown1() {
+            var contentId = document.getElementById("dropdown1");
               // Toggle 
               contentId.style.display == "block" ? contentId.style.display = "none" : 
             contentId.style.display = "block"; 
         }
-        // Display tempo slider when tempo button clicked
-        function setTempo(){
-            
+        // Display dropdown 2
+        function dropdown2() {
+            var contentId = document.getElementById("dropdown2");
+              // Toggle 
+              contentId.style.display == "block" ? contentId.style.display = "none" : 
+            contentId.style.display = "block"; 
+        }
+        // Display dropdown 3
+        function dropdown3() {
+            var contentId = document.getElementById("dropdown3");
+              // Toggle 
+              contentId.style.display == "block" ? contentId.style.display = "none" : 
+            contentId.style.display = "block"; 
+        }
+        // Display dropdown 4
+        function dropdown4() {
+            var contentId = document.getElementById("dropdown4");
+              // Toggle 
+              contentId.style.display == "block" ? contentId.style.display = "none" : 
+            contentId.style.display = "block"; 
         }
        var tempo = 120;
        var seqState = 0; 
