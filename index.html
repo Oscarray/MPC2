@@ -43,16 +43,29 @@
         
         }
         
-    .drpButton, .selectorButton{
+     .selectorButton{
         background-color: #30144f;
         color: white;
         width: 100%;
-        height: 25%;
+       height: 25%;
         float: left;
         display: block;
         border-radius: 2px;
         transition-duration: 0.4s;
         }
+        
+        .drpButton{
+            background-color: #30144f;
+        color: white;
+        width: 100%;
+       height: 100%;
+        float: left;
+        display: block;
+        border-radius: 2px;
+        transition-duration: 0.4s;
+        }
+        
+        
     .drpButton:hover, .selectorButton:hover{
         background-color: #9b6bcf;
         color: black;
@@ -104,7 +117,7 @@
 </head>
 <body id="mainBody" width="100%" height="100%">
   <div id="leftMenu">
-      <button id= button1 class= selectorButton>Steve</button>
+      <button id= button1 class= selectorButton>Stuart</button>
       <button id= button2 class= selectorButton>Drum Pads</button>
       <button id= button3 class= selectorButton>FX</button>
       <button id= button4 class= selectorButton>Settings</button>
@@ -124,10 +137,36 @@
             <a href="#erase">Erase</a>
         </div>
       </div>
-      <button id= button6 class= drpButton onclick= "setTempo()">Tempo</button>
-      <button id= button7 class= drpButton>Mute</button>
-      <button id= button8 class= drpButton>Discard</button>
       
+      <div class= "dropdown">
+      <button onclick="setTempo()" id="button6" class="drpButton">Tempo</button>
+        <div id= "myDropdown" class= "dropdown-content">
+            <a href="#play">Play</a>
+            <a href="#pause">Pause</a>
+            <a href="#reset">Reset</a>
+            <a href="#erase">Erase</a>
+        </div>
+      </div>
+      
+      <div class= "dropdown">
+      <button onclick="myFunction()" id="button7" class="drpButton">Mute</button>
+        <div id= "myDropdown" class= "dropdown-content">
+            <a href="#play">Play</a>
+            <a href="#pause">Pause</a>
+            <a href="#reset">Reset</a>
+            <a href="#erase">Erase</a>
+        </div>
+      </div>
+      
+      <div class= "dropdown">
+      <button onclick="myFunction()" id="button8" class="drpButton">Discard</button>
+        <div id= "myDropdown" class= "dropdown-content">
+            <a href="#play">Play</a>
+            <a href="#pause">Pause</a>
+            <a href="#reset">Reset</a>
+            <a href="#erase">Erase</a>
+        </div>
+      </div>
   </div>
     
     <script> 
