@@ -103,16 +103,6 @@
 
     </style>
     
-    <script>
-    nx.onload = function() {
-        matrix1.col = 16;
-        matrix1.row = 8;
-        //matrix1.tempo = 120;
-        //matrix1.bpm = tempo;
-        matrix1.init();
-    }
-  </script>
-    
 </head>
 <body id="mainBody" width="100%" height="100%">
   <div id="leftMenu">
@@ -134,6 +124,14 @@
   </div>
     
     <script> 
+        
+            nx.onload = function() {
+        matrix1.col = 16;
+        matrix1.row = 8;
+        matrix1.tempo = 120;
+        matrix1.bpm = tempo;
+        matrix1.init();
+    }
           // Display dropdown 1
         function dropdown1() {
             var contentId = document.getElementById("dropdown1");
