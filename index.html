@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>MPC Assignment 2</title>
+    <title>Mobile Drum Machine</title>
     <meta name="author" content="Oscar Rayment" />
-    <meta name="date" content="March 21 2017" />
+    <meta name="date" content="April 9th 2018" />
     
     <script src="https://rawgit.com/Tonejs/Tone.js/master/build/Tone.js"></script>
     <script src="https://rawgit.com/lsu-emdm/nexusUI/master/dist/nexusUI.js"></script>
@@ -102,10 +102,11 @@
 
 
     </style>
+    
     <script>
     nx.onload = function() {
         matrix1.col = 16;
-        matrix1.row = 12;
+        matrix1.row = 8;
         //matrix1.tempo = 120;
         //matrix1.bpm = tempo;
         matrix1.init();
@@ -118,52 +119,18 @@
       <button id= button1 class= selectorButton>Dave</button>
       <button id= button2 class= selectorButton>Drum Pads</button>
       <button id= button3 class= selectorButton>FX</button>
-      <button id= button4 class= selectorButton>Settings</button>
-      
+      <button id= button4 class= selectorButton>Settings</button>    
   </div>
-  <div id="main">
-      <canvas nx=matrix></canvas>  
-      
+    
+  <div id="main"> 
+      <canvas nx = matrix> </canvas>  
   </div>
+    
   <div id="rightMenu">
-      <div class= "dropdown">
-      <button onclick="dropdown1()" id="button5" class="drpButton">Play</button>
-        <div id= "dropdown1" class= "dropdown-content">
-            <a href="#play">Play</a>
-            <a href="#pause">Pause</a>
-            <a href="#reset">Reset</a>
-        </div>
-      </div>
-      
-      <div class= "dropdown">
-      <button onclick="dropdown2()" id="button6" class="drpButton">Tempo</button>
-        <div id= "dropdown2" class= "dropdown-content">
-            <a href="#tempo1">Tempo +</a>
-            <a href="#tempo2">Tempo -</a>
-            <a href="#reset2">Reset</a>
-
-        </div>
-      </div>
-      
-      <div class= "dropdown">
-      <button onclick="dropdown3()" id="button7" class="drpButton">Volume</button>
-        <div id= "dropdown3" class= "dropdown-content">
-            <a href="#volume1">Volume +</a>
-            <a href="#volume2">Volume -</a>
-            <a href="#mute">Mute</a>
-
-        </div>
-      </div>
-      
-      <div class= "dropdown">
-      <button onclick="dropdown4()" id="button8" class="drpButton">Discard</button>
-        <div id= "dropdown4" class= "dropdown-content">
-            <a href="#play">Play</a>
-            <a href="#pause">Pause</a>
-            <a href="#reset">Reset</a>
-            <a href="#erase">Erase</a>
-        </div>
-      </div>
+      <button id= button5 class= selectorButton>Play</button>
+      <button id= button6 class= selectorButton>Tempo Pads</button>
+      <button id= button7 class= selectorButton>Blank</button>
+      <button id= button8 class= selectorButton>Reset</button>
   </div>
     
     <script> 
